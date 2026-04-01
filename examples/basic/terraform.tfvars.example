@@ -1,0 +1,16 @@
+pm_api_url          = "https://pve.example.com:8006/api2/json"
+pm_api_token_id     = "terraform@pve!deploy"
+pm_api_token_secret = "replace-me"
+
+target_node = "pve01"
+
+sshkeys = <<-EOT
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExampleKeyReplaceMe user@example
+EOT
+
+# Use dhcp or a static assignment like:
+# ipconfig0 = "ip=192.168.10.50/24,gw=192.168.10.1"
+ipconfig0 = "ip=dhcp"
+
+# Optional Proxmox snippet reference.
+# cicustom = "user=local:snippets/debian-user-data.yaml"
